@@ -32,6 +32,7 @@ class _BodyHomePageState extends State<BodyHomePage> {
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 50,
+
                   fontWeight: FontWeight.normal),
             ),
             CardWidgets()

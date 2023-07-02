@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
 
       theme: ThemeData(
         scaffoldBackgroundColor: buttonColor,
+        fontFamily: 'Poppins',
 
 
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
