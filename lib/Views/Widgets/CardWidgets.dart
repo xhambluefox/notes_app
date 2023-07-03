@@ -14,7 +14,7 @@ class _CardWidgetsState extends State<CardWidgets> {
   Widget build(BuildContext context) {
     return Container(
 
-      width: MediaQuery.of(context).size.width * 0.45,
+      width: MediaQuery.of(context).size.width * 0.5,
       child: Card(
         color: cardColor1,
         elevation: 9,
@@ -23,7 +23,7 @@ class _CardWidgetsState extends State<CardWidgets> {
         ),
         shadowColor: Colors.white.withOpacity(0.4),
         child: Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(10.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -40,14 +40,14 @@ class _CardWidgetsState extends State<CardWidgets> {
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
                       fontSize: 20),
-                  textAlign: TextAlign.justify),
+                  textAlign: TextAlign.start),
               Text(
                 "Buy the new brand Honey for my Family. Here's the pic.",
                 style: TextStyle(
                     color: Colors.black54,
                     fontSize: 13,
                     fontWeight: FontWeight.normal),
-                textAlign: TextAlign.justify,
+                textAlign: TextAlign.start,
               ),
               SizedBox(
                 height: 40,

@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 import 'package:notes_app/Views/Widgets/CardWidgets.dart';
 import 'package:notes_app/Views/Widgets/appBarWidgets.dart';
@@ -23,7 +24,7 @@ class _BodyHomePageState extends State<BodyHomePage> {
         padding: const EdgeInsets.symmetric(horizontal: 2),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
+          children:  [
             SizedBox(
               height: 20,
             ),
@@ -35,10 +36,24 @@ class _BodyHomePageState extends State<BodyHomePage> {
 
                   fontWeight: FontWeight.normal),
             ),
-            CardWidgets()
+
+
+            Expanded(child: mansouryGridView()),
           ],
         ),
       ),
     );
   }
+}
+
+Widget mansouryGridView(){
+  return MasonryGridView.builder(
+    scrollDirection: Axis.vertical,
+    physics: BouncingScrollPhysics(),
+    itemCount: 10,
+      gridDelegate: SliverSimpleGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+      itemBuilder: (context, index){
+
+    return CardWidgets();
+      });
 }
