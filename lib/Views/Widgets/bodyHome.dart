@@ -26,7 +26,13 @@ class _BodyHomePageState extends State<BodyHomePage> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: cardColor3,
         onPressed: (){
-          showModalBottomSheet(context: context, builder: (context)=>AddNoteBottomSheet());
+          showModalBottomSheet(
+            backgroundColor: buttonColor,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16)
+            ),
+              context: context, 
+              builder: (context)=>AddNoteBottomSheet());
         }
         ,child: Icon(Icons.add, color: Colors.black,size: 25,),),
       body: Padding(
