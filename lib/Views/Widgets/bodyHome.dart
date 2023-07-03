@@ -1,8 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:notes_app/Const/ColorsConst.dart';
 
 import 'package:notes_app/Views/Widgets/CardWidgets.dart';
+import 'package:notes_app/Views/Widgets/MansouryGridView.dart';
 import 'package:notes_app/Views/Widgets/appBarWidgets.dart';
 
 class BodyHomePage extends StatefulWidget {
@@ -20,6 +22,10 @@ class _BodyHomePageState extends State<BodyHomePage> {
         preferredSize: Size(double.infinity, 80),
         child: AppBarWidgets(),
       ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: cardColor3,
+        onPressed: (){}
+        ,child: Icon(Icons.add, color: Colors.black,size: 25,),),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 2),
         child: Column(
@@ -46,14 +52,4 @@ class _BodyHomePageState extends State<BodyHomePage> {
   }
 }
 
-Widget mansouryGridView(){
-  return MasonryGridView.builder(
-    scrollDirection: Axis.vertical,
-    physics: BouncingScrollPhysics(),
-    itemCount: 10,
-      gridDelegate: SliverSimpleGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-      itemBuilder: (context, index){
 
-    return CardWidgets();
-      });
-}
