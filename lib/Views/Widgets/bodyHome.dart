@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:notes_app/Const/ColorsConst.dart';
+import 'package:notes_app/Views/Widgets/AddNoteBottomSheet.dart';
 
 import 'package:notes_app/Views/Widgets/CardWidgets.dart';
 import 'package:notes_app/Views/Widgets/MansouryGridView.dart';
@@ -24,7 +25,9 @@ class _BodyHomePageState extends State<BodyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: cardColor3,
-        onPressed: (){}
+        onPressed: (){
+          showModalBottomSheet(context: context, builder: (context)=>AddNoteBottomSheet());
+        }
         ,child: Icon(Icons.add, color: Colors.black,size: 25,),),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 2),
