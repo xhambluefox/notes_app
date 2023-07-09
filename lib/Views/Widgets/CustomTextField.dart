@@ -24,10 +24,11 @@ class _CustomTextFieldState extends State<CustomTextField> {
       maxLines: widget.maxLines,
       cursorColor: Colors.white,
       decoration: InputDecoration(
-          label: Text(widget.title),
+          label: Text(widget.title, textAlign: TextAlign.start,),
           hintText: widget.hint,
           hintStyle: TextStyle(
             color: Colors.white,
+
 
           ),
 
