@@ -5,7 +5,8 @@ import '../../Const/ColorsConst.dart';
 class CustumerButton extends StatelessWidget {
   final String textname;
 
-  CustumerButton({super.key, required this.textname});
+  CustumerButton({super.key, required this.textname, required this.onPressed});
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class CustumerButton extends StatelessWidget {
             elevation: 6,
             padding: EdgeInsets.all(10),
           ),
-          onPressed: () {},
+          onPressed: onPressed,
           child: Text(
             textname,
             style: const TextStyle(
